@@ -1,5 +1,8 @@
 #' @title Plot genes on the main circle
 #' @name plotGenesOnCircle
+#' @param tree phylo object obtained from calling read.tree on a newick tree file
+#' @param radius desired radius of main circle
+#' @param x coordinate for the center of the circle
 #' @param y coordinate for the center of the circle
 #' @param clustered default FALSE results in evenly spaced genes on the circle, functionality for TRUE unimplemented
 #' @param geneCircleRadius radius for genes placed around the edge of the circle

@@ -1,6 +1,7 @@
 #' @title Create output table from KaKs_caclculator data
 #' @name createOutputTableFromKaKsCalc
 #' @param directoryPath, is the path to the directory containing output from KaKs_Calculator
+#' @param outfileName the file to write the new compiled data to in csv format
 #' @param extension, the extension of all the output files from KaKs_Calculator
 #' @export
 createOutputTableFromKaKsCalc <- function(directoryPath, outfileName, extension = NULL){
