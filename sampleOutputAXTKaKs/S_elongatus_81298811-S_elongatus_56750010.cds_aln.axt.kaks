@@ -1,0 +1,2 @@
+Sequence	Method	Ka	Ks	Ka/Ks	P-Value(Fisher)	Length	S-Sites	N-Sites	Fold-Sites(0:2:4)	Substitutions	S-Substitutions	N-Substitutions	Fold-S-Substitutions(0:2:4)	Fold-N-Substitutions(0:2:4)	Divergence-Time	Substitution-Rate-Ratio(rTC:rAG:rTA:rCG:rTG:rCA/rCA)	GC(1:2:3)	ML-Score	AICc	Akaike-Weight	Model
+S_elongatus_81298811-S_elongatus_56750010	MA	NA	NA	NA	NA	426	105.073	320.927	NA	0	NA	NA	NA	NA	NA	0.493243:0.468861:0.499115:0.489465:0.327358:1	0.285223(0.28866:0.257732:0.309278)	-571.835	NA	NA	NA

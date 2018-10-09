@@ -1,0 +1,19 @@
+Package: KaKsMap
+Type: Package
+Title: KaKsMap
+Version: 0.1.0
+Author: Emily Ayala
+Maintainer: Emily Ayala <emily.ayala@mail.utoronto.ca>
+Description: Plot genes on a circle and connect them based on KaKscalculations using colour to show the value.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+  ape,
+  diagram,
+  pracma
+Suggests:
+    testthat,
+    devtools,
+    roxygen2
+RoxygenNote: 6.1.0

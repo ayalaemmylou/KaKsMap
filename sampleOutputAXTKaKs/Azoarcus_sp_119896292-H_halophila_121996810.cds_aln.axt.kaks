@@ -1,0 +1,2 @@
+Sequence	Method	Ka	Ks	Ka/Ks	P-Value(Fisher)	Length	S-Sites	N-Sites	Fold-Sites(0:2:4)	Substitutions	S-Substitutions	N-Substitutions	Fold-S-Substitutions(0:2:4)	Fold-N-Substitutions(0:2:4)	Divergence-Time	Substitution-Rate-Ratio(rTC:rAG:rTA:rCG:rTG:rCA/rCA)	GC(1:2:3)	ML-Score	AICc	Akaike-Weight	Model
+Azoarcus_sp_119896292-H_halophila_121996810	MA	0.19747	4.46227	0.0442532	0	411	71.5637	339.436	NA	129	106.62	22.3796	NA	NA	0.940061	1.10005:1.13282:0.821372:0.823399:0.394049:1	0.306415(0.295533:0.230241:0.393471)	-856.821	NA	NA	NA

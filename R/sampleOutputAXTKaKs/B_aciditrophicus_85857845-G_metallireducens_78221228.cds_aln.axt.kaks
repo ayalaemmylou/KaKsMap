@@ -1,0 +1,2 @@
+Sequence	Method	Ka	Ks	Ka/Ks	P-Value(Fisher)	Length	S-Sites	N-Sites	Fold-Sites(0:2:4)	Substitutions	S-Substitutions	N-Substitutions	Fold-S-Substitutions(0:2:4)	Fold-N-Substitutions(0:2:4)	Divergence-Time	Substitution-Rate-Ratio(rTC:rAG:rTA:rCG:rTG:rCA/rCA)	GC(1:2:3)	ML-Score	AICc	Akaike-Weight	Model
+B_aciditrophicus_85857845-G_metallireducens_78221228	MA	0.196388	3.3618	0.0584176	0	420	106.627	313.373	NA	149	127.167	21.8331	NA	NA	1	0.823238:1.01635:0.756977:0.74557:0.69841:1	0.238259(0.249141:0.235395:0.230241)	-924.954	NA	NA	NA

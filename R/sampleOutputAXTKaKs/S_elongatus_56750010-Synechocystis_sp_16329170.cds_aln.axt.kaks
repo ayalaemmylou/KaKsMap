@@ -1,0 +1,2 @@
+Sequence	Method	Ka	Ks	Ka/Ks	P-Value(Fisher)	Length	S-Sites	N-Sites	Fold-Sites(0:2:4)	Substitutions	S-Substitutions	N-Substitutions	Fold-S-Substitutions(0:2:4)	Fold-N-Substitutions(0:2:4)	Divergence-Time	Substitution-Rate-Ratio(rTC:rAG:rTA:rCG:rTG:rCA/rCA)	GC(1:2:3)	ML-Score	AICc	Akaike-Weight	Model
+S_elongatus_56750010-Synechocystis_sp_16329170	MA	0.156547	1.85052	0.0845962	2.88767e-55	417	108.75	308.25	NA	116	93.5645	22.4355	NA	NA	0.59832	1.01939:0.993512:0.986025:0.992121:0.672562:1	0.27226(0.280822:0.25:0.285959)	-884.514	NA	NA	NA
