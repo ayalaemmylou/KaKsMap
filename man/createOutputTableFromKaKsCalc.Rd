@@ -10,6 +10,8 @@ createOutputTableFromKaKsCalc(directoryPath, outfileName,
 \arguments{
 \item{directoryPath, }{is the path to the directory containing output from KaKs_Calculator}
 
+\item{outfileName}{the file to write the new compiled data to in csv format}
+
 \item{extension, }{the extension of all the output files from KaKs_Calculator}
 }
 \description{

@@ -9,7 +9,7 @@ readInData(phylogeneticTreePath, kaksCalcOutputTablePath)
 \arguments{
 \item{phylogeneticTreePath}{path to a tree in newick format}
 
-\item{kaksCalcOutput}{path to a table containing a header and output from KaKs_Calculator for at least one calculation}
+\item{kaksCalcOutputTablePath}{path to a table containing a header and output from KaKs_Calculator for at least one calculation}
 }
 \value{
 a list containing a phylo object and a table

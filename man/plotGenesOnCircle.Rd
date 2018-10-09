@@ -8,6 +8,12 @@ plotGenesOnCircle(tree, radius, x = 0, y = 0, clustered = FALSE,
   geneCircleRadius, plot = plot.new())
 }
 \arguments{
+\item{tree}{phylo object obtained from calling read.tree on a newick tree file}
+
+\item{radius}{desired radius of main circle}
+
+\item{x}{coordinate for the center of the circle}
+
 \item{y}{coordinate for the center of the circle}
 
 \item{clustered}{default FALSE results in evenly spaced genes on the circle, functionality for TRUE unimplemented}
