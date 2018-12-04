@@ -1,10 +1,23 @@
-#' @title Create output table from KaKs_caclculator data
-#' @name createOutputTableFromKaKsCalc
+# createOutputTableFromKaKsCalc.R
+
+#' @title createOutputTableFromKaKsCalc
+#'
+#' @description Create a csv table from the output from KaKs Calculator
+#'
+#' @note The output from KaKs Calculator gives multiple files.  Those you want are the ones
+#' with the .kaks extension.
+#'
 #' @param directoryPath, is the path to the directory containing output from KaKs_Calculator
 #' @param outfileName the file to write the new compiled data to in csv format
 #' @param extension, the extension of all the output files from KaKs_Calculator
+#'
+#' @example
+#'
+#'
 #' @export
-createOutputTableFromKaKsCalc <- function(directoryPath, outfileName, extension = NULL){
+createOutputTableFromKaKsCalc <- function(directoryPath,
+                                          outfileName,
+                                          extension = NULL){
 
   if(! is.null(extension)){
     #Use regex to get files with the indicated extension
@@ -12,6 +25,7 @@ createOutputTableFromKaKsCalc <- function(directoryPath, outfileName, extension 
   }
   else{
     files <- list.files(path = directoryPath)
+    print(files)
   }
   for (file in files){
     if (! exists("compiledResults")){
@@ -25,7 +39,6 @@ createOutputTableFromKaKsCalc <- function(directoryPath, outfileName, extension 
       rm(oneResult)
     }
   }
-  #TODO: add a keyword param in case kaks_output files cannot be separated from other files in the same dir using the extension
   write.csv(compiledResults, file = outfileName)
 }
 # [END]

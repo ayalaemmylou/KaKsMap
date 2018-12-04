@@ -2,7 +2,7 @@
 
 ## KaKsMap
 
-<Breif Project description>
+KaKsMap gives a circle plot with genes spread out around the circle, connected by coloured lines representing the KaKs value.
 
   [R Packages](http://r-pkgs.had.co.nz/) <http://r-pkgs.had.co.nz/>
 
@@ -25,5 +25,16 @@ Some useful keyboard shortcuts for package authoring:
 
 Load the package (outside of this project) with:
     `devtools::install_github("ayalaemmylou/KaKsMap")`
+    
+-----------------------------------------------
+
+Example for use:
+
+#Create a table using the output from kaks data
+createOutputTableFromKaKsCalc("inst/extdata/sampleOutputAXTKaKs", "inst/extdata/sampleDataTable.csv", "kaks")
+#Read in the data
+data <- readInData("inst/extdata/tree.nwk", "inst/extdata/sampleDataTable.csv")
+#Create the plot
+drawKaKsMap(data$tree, data$table)
 
 
