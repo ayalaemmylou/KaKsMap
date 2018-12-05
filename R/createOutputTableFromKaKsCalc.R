@@ -16,8 +16,9 @@
 #'
 #' @export
 createOutputTableFromKaKsCalc <- function(directoryPath,
-                                          outfileName,
+                                          outFileName,
                                           extension = NULL){
+  print(extension)
 
   if(! is.null(extension)){
     #Use regex to get files with the indicated extension
@@ -25,20 +26,21 @@ createOutputTableFromKaKsCalc <- function(directoryPath,
   }
   else{
     files <- list.files(path = directoryPath)
-    print(files)
   }
   for (file in files){
-    if (! exists("compiledResults")){
-      #Create the dataframe to hold all the data
-      compiledResults <- read.delim(paste0(directoryPath, "/", file), header = TRUE, sep = "\t")
-    }
-    else {
-      #Compile all the data in the previously created dataframe
-      oneResult <- read.delim(paste0(directoryPath, "/", file), header = TRUE, sep = "\t")
-      compiledResults <- rbind(oneResult, compiledResults)
-      rm(oneResult)
+    if(!is.null(file) && ! isempty(file)){
+      if (! exists("compiledResults")){
+        #Create the dataframe to hold all the data
+        compiledResults <- read.delim(paste0(directoryPath, "\\", file), header = TRUE, sep = "\t")
+      }
+      else {
+        #Compile all the data in the previously created dataframe
+        oneResult <- read.delim(paste0(directoryPath, "\\", file), header = TRUE, sep = "\t")
+        compiledResults <- rbind(oneResult, compiledResults)
+        rm(oneResult)
+      }
     }
   }
-  write.csv(compiledResults, file = outfileName)
+  write.csv(compiledResults, file = paste0("./", outFileName))
 }
 # [END]

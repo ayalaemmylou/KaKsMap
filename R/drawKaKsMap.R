@@ -23,6 +23,5 @@ drawKaKsMap <- function(tree,
   p <- plot(0, 0, asp = 1, type = "n", xaxt = "n", yaxt = "n", ann = FALSE)
   points <- plotGenesOnCircle(tree, plot = p)
   plotLinesOfKaKsValues(tree, table, points, plot = p)
-  return(p)
 }
 # [END]
