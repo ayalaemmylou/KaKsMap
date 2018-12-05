@@ -40,6 +40,14 @@
     install.packages("shiny")
     library(shiny)
   }
+  if(! require(knitr, quietly=TRUE)) {
+    install.packages("knitr")
+    library(knitr)
+  }
+  if(! require(rmarkdown, quietly=TRUE)) {
+    install.packages("rmarkdown")
+    library(rmarkdown)
+  }
   invisible()
 }
 

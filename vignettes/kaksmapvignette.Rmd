@@ -1,0 +1,77 @@
+---
+title: "KaKs Map Vignette"
+author: "Emily Ayala"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+KaKsMap is an R package which allows the user to take in data from the output of KaKs Calculator, put it in a table and show a graphical representation.  It was made for BCB410 course project at the University of Toronto Fall of 2018.
+
+# 1 Reading data into the program
+
+## 1.1 Creating a data table from KaKs Calculator Output
+
+After running KaKs Calculator you are left with multiple files, make sure those files are all in the same directory.  Half of the files contain a tab delimited output, those are the files you want and they should all have the same extension.
+
+If the tab deliminated output files are the only ones int the directory run the following command:
+
+'''
+createOutputTableFromKaKsCalc("pathToDirectory", "pathToFileToSaveNewCSVFile")
+'''
+
+If the tab deliminated output files have, for example ".kaks" as the extension and there are other files within the same directory, run the following command:
+
+'''
+createOutputTableFromKaKsCalc("pathToDirectory", "pathToFileToSaveNewCSVFile", "kaks")
+'''
+
+If you get the error "number of columns of arguments do not match" that is an indication that some of the undesired files are being uploaded.  You can either remove them from the directory or include the extension parameter
+
+The output from this function will be a comma separated file where you indicated containing a compliation of all the results from KaKs Calculator.
+
+If you would like to try running it using the example data given run the following:
+
+'''
+createOutputTableFromKaKsCalc("inst/extdata/sampleOutputAXTKaKs", "inst/extdata/sampleDataTable.csv", "kaks")
+'''
+
+
+## 1.2 Read in the tree and table
+
+Before drawing the plot you need to read the data into the program.  The data required is a data table, such as the one created in 1.1 and a tree file in Newick format (extension .nwk).  Run a command simillar to the following:
+
+'''
+data <- readInData("PathToTree/tree.nwk", "PathToTable/table.csv")
+'''
+
+Using the sample data provided the command would be:
+data <- readInData("inst/extdata/tree.nwk", "inst/extdata/sampleDataTable.csv")
+
+
+# 2 Drawing the Map
+## 2.1
+
+WARNING: This command cannot be run until you have run readInData as explained in 1.2!
+
+In order do draw map you will need to run the following command:
+
+'''
+drawKaKsMap(data$tree, data$table)
+'''
+
+The plot should appear in the Plots view to the side.
+
+The genes were placed based on their location within the tree file.  The colours of the connecting arrows indicating the selection pressure.  Black indiates no selection. Red indicates negative selection.  Green indicates position selection.
+
+
